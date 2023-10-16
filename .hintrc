@@ -19,6 +19,13 @@
         ]
       }
     ],
-    "button-type": "off"
+    "button-type": "off",
+    "disown-opener": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
   }
 }

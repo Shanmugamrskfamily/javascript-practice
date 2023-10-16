@@ -8,3 +8,10 @@
   backdrop-filter: blur(5px);
   display: none;
 }
+.dis {
+  margin-top: 200px;
+}
+body {
+  background: -webkit-linear-gradient(to right, #1565c0, #b92b27);
+  background: linear-gradient(to right, #1565c0, #b92b27);
+}
