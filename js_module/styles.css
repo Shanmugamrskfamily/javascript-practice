@@ -1,5 +1,5 @@
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -7,8 +7,8 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   display: none;
-  z-index: 5;
 }
+
 .dis {
   margin-top: 200px;
 }

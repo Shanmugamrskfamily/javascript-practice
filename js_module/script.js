@@ -1,13 +1,13 @@
-    const currentYear = new Date().getFullYear();
-    document.getElementById("copyright-year").textContent = currentYear;
-    const modal = document.getElementById("myModal");
-    const modalOverlay = document.getElementById("modalOverlay");
-    const showModalBtn = document.getElementById("showModalBtn");
-    const showModalBtn2 = document.getElementById("showModalBtn2");
-    const showModalBtn3 = document.getElementById("showModalBtn3");
-    const showModalBtn4 = document.getElementById("showModalBtn4");
-    const modalBody = document.getElementById("modalBody");
-    const modalTitle = document.getElementById("modalTitle");
+const currentYear = new Date().getFullYear();
+      document.getElementById("copyright-year").textContent = currentYear;
+      const modal = document.getElementById("myModal");
+      const modalOverlay = document.getElementById("modalOverlay");
+      const showModalBtn = document.getElementById("showModalBtn");
+      const showModalBtn2 = document.getElementById("showModalBtn2");
+      const showModalBtn3 = document.getElementById("showModalBtn3");
+      const showModalBtn4 = document.getElementById("showModalBtn4");
+      const modalBody = document.getElementById("modalBody");
+      const modalTitle = document.getElementById("modalTitle");
 
       const modalData = [
         {
@@ -47,7 +47,7 @@
       showModalBtn4.addEventListener("click", showModal);
       modal.querySelector(".close").addEventListener("click", hideModal);
       window.addEventListener("click", (event) => {
-        if (event.target === modalOverlay) {
+        if (event.target === modal) {
           hideModal();
         }
       });

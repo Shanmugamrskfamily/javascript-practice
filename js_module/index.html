@@ -19,26 +19,7 @@
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <style>
-      .modal-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(5px);
-        display: none;
-      }
-
-      .dis {
-        margin-top: 200px;
-      }
-      body {
-        background: -webkit-linear-gradient(to right, #1565c0, #b92b27);
-        background: linear-gradient(to right, #1565c0, #b92b27);
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
     <title>JavaScript Modal Practice by SHANMUGAM</title>
   </head>
   <body>
@@ -130,65 +111,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      const currentYear = new Date().getFullYear();
-      document.getElementById("copyright-year").textContent = currentYear;
-      const modal = document.getElementById("myModal");
-      const modalOverlay = document.getElementById("modalOverlay");
-      const showModalBtn = document.getElementById("showModalBtn");
-      const showModalBtn2 = document.getElementById("showModalBtn2");
-      const showModalBtn3 = document.getElementById("showModalBtn3");
-      const showModalBtn4 = document.getElementById("showModalBtn4");
-      const modalBody = document.getElementById("modalBody");
-      const modalTitle = document.getElementById("modalTitle");
-
-      const modalData = [
-        {
-          title: "Modal 1",
-          content: "This is Modal 1 content.",
-        },
-        {
-          title: "Modal 2",
-          content: "This is Modal 2 content.",
-        },
-        {
-          title: "Modal 3",
-          content: "This is Modal 3 content.",
-        },
-        {
-          title: "Modal 4",
-          content: "This is Modal 4 content.",
-        },
-      ];
-
-      function showModal() {
-        const index = this.getAttribute("data-index");
-        modal.style.display = "block";
-        modalOverlay.style.display = "block";
-        modalTitle.innerHTML = `<h1>${modalData[index].title}</h1>`;
-        modalBody.innerHTML = `<p>${modalData[index].content}</p>`;
-      }
-
-      function hideModal() {
-        modal.style.display = "none";
-        modalOverlay.style.display = "none";
-      }
-
-      showModalBtn.addEventListener("click", showModal);
-      showModalBtn2.addEventListener("click", showModal);
-      showModalBtn3.addEventListener("click", showModal);
-      showModalBtn4.addEventListener("click", showModal);
-      modal.querySelector(".close").addEventListener("click", hideModal);
-      window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          hideModal();
-        }
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          hideModal();
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
